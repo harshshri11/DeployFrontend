@@ -1,7 +1,8 @@
-// A mock function to mimic making an async request for data
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'https://deploybackend-production-1494.up.railway.app';
+
 export function fetchCount(amount = 1) {
   return new Promise(async (resolve) => {
-    const response = await fetch("http://localhost:8080");
+    const response = await fetch(`${API_BASE_URL}`);
     const result = await response.json();
     resolve({ result });
   });
