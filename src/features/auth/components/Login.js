@@ -13,6 +13,8 @@ export default function Login() {
     handleSubmit,
     formState: { errors },
   } = useForm();
+  console.log('Base URL:', process.env.REACT_APP_API_BASE_URL);
+
 
   console.log(errors);
 
